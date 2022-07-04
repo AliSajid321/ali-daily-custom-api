@@ -11,6 +11,8 @@ const newRoomEndpoint =
  * See https://docs.daily.co/reference#create-room for more information on how
  * to use the Daily REST API to create rooms and what options are available. 
  */
+
+
 async function createRoom() {
 
   const exp = Math.round(Date.now() / 1000) + 60 * 30;
@@ -18,7 +20,8 @@ async function createRoom() {
   const options = {
     properties: {
       exp: exp,
-      max_particpants: max_particpants, 
+      //max_particpants: max_particpants,
+      start_video_off: true, 
     },
   };
   let response = await fetch(newRoomEndpoint, {
