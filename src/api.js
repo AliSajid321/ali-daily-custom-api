@@ -14,9 +14,11 @@ const newRoomEndpoint =
 async function createRoom() {
 
   const exp = Math.round(Date.now() / 1000) + 60 * 30;
+  const max_part = 3;
   const options = {
     properties: {
       exp: exp,
+      max_particpants: max_part 
     },
   };
   let response = await fetch(newRoomEndpoint, {
