@@ -20,8 +20,8 @@ async function createRoom() {
   const options = {
     properties: {
       exp: exp,
-      //max_particpants: max_particpants,
-      start_video_off: true, 
+      max_participants: max_particpants,
+      start_video_off: true,
     },
   };
   let response = await fetch(newRoomEndpoint, {
