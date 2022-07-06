@@ -16,12 +16,12 @@ const newRoomEndpoint =
 async function createRoom() {
 
   const exp = Math.round(Date.now() / 1000) + 60 * 30;
-  const max_particpants = 3;
+  const max_particpants = 6;
   const options = {
     properties: {
       exp: exp,
       max_participants: max_particpants,
-      start_video_off: true,
+      
     },
   };
   let response = await fetch(newRoomEndpoint, {
